@@ -15,7 +15,9 @@ const commands = [
     command: "mv origem destino",
     description: "Move ou renomeia um arquivo/pasta.",
   },
-  { command: "cat arquivo", description: "Exibe o conteúdo de um arquivo." },
+  { command: " cat arquivo", description: "Exibe o conteúdo de um arquivo." },
+  
+  { command: " cat > notas.txt  ", description: "Use o cat com redirecionamento (>) para criar um arquivo e inserir conteúdo:" },
   {
     command: "nano arquivo",
     description: "Edita um arquivo com o editor nano.",
@@ -27,6 +29,8 @@ const commands = [
   },
   { command: "history", description: "Mostra os comandos digitados." },
   { command: "clear", description: "Limpa o terminal." },
+  { command: " touch notas .txt", description: "criar arquivo" },
+  { command: "echo", description: "Exibe texto no terminal." },
  
 ];
 

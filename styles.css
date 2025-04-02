@@ -1,43 +1,70 @@
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Estilização geral */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1e1e2e;
-  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5dc; /* Cor de fundo parecida com papel */
+  color: #333;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
-/* Container */
+/* Efeito de caderno no fundo */
 .container {
   max-width: 800px;
   margin: auto;
-  background: #2a2a3a;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background: repeating-linear-gradient(
+    white 0px, 
+    white 24px, 
+    #d0d0d0 25px
+  ); /* Linhas cinzas como um caderno */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-left: 6px solid #d72638; /* Linha vermelha da margem do caderno */
+}
+
+/* Linha azul à esquerda (parecendo um caderno real) */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 2px;
+  height: 100%;
+  background-color: #2b65ec;
 }
 
 /* Título */
 h1 {
   margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #d72638; /* Vermelho para combinar com a margem */
 }
 
 /* Tabela */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 16px;
 }
 
 /* Cabeçalho da tabela */
 thead {
   background-color: #3a3a4a;
+  font-weight: 600;
+  color: white;
 }
 
 th, td {
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #444;
+  background: rgba(255, 255, 255, 0.8); /* Deixa o fundo da tabela levemente transparente */
 }
 
 /* Botão de cópia */
@@ -45,9 +72,11 @@ th, td {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 8px 12px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: 500;
+  
 }
 
 .copy-btn:hover {
